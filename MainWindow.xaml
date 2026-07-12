@@ -283,16 +283,17 @@
                     <RichTextBox Grid.Column="1" 
                                  x:Name="TargetRichTextBox" 
                                  Style="{StaticResource {x:Type RichTextBox}}"
-                                 AcceptsReturn="True" 
+                                 AcceptsReturn="True"
                                  VerticalScrollBarVisibility="Auto" 
                                  HorizontalScrollBarVisibility="Auto"
                                  ScrollViewer.ScrollChanged="OnRichTextBoxScrollChanged"
                                  TextChanged="OnRichTextBoxTextChanged"
+                                 PreviewKeyDown="OnEditorPreviewKeyDown"
                                  BorderThickness="0,1,1,1"
                                  Background="#1E1E1E"
                                  Padding="5,10,8,8">
-                        <FlowDocument LineHeight="19" PageWidth="10000">
-                            <Paragraph Foreground="{StaticResource TextPrimary}">Вставьте сюда текст для проверки регулярного выражения...</Paragraph>
+                        <FlowDocument LineHeight="19">
+                            <Paragraph/>
                         </FlowDocument>
                     </RichTextBox>
                 </Grid>

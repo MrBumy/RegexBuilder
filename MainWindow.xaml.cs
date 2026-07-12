@@ -103,21 +103,43 @@ namespace RegexBuilder
 
         private void UpdateLineNumbers()
         {
-            string text = GetRichTextBoxText();
-            int lineCount = text.Split('\n').Length;
-            
-            if (lineCount < 1) lineCount = 1;
+            // Count '\n' in raw TextRange text. WPF emits exactly one \r\n per
+            // paragraph, so this equals the number of visual lines — including
+            // an empty trailing line (e.g. after pressing Enter).
+            var raw = new TextRange(
+                TargetRichTextBox.Document.ContentStart,
+                TargetRichTextBox.Document.ContentEnd).Text;
+            int lineCount = Math.Max(1, raw.Count(c => c == '\n'));
 
             var sb = new StringBuilder();
             for (int i = 1; i <= lineCount; i++)
             {
-                sb.AppendLine(i.ToString());
+                sb.Append(i);
+                if (i < lineCount) sb.Append('\n');
             }
 
             LineNumbersTextBlock.Text = sb.ToString();
         }
 
+
+        /// <summary>
+        /// Pressing Enter in a WPF RichTextBox creates a new Paragraph which
+        /// carries its own block spacing and looks like a double line-break.
+        /// We intercept Enter and fire EnterLineBreak instead, which inserts a
+        /// bare &lt;LineBreak/&gt; inside the current paragraph — single line, zero
+        /// extra spacing.
+        /// </summary>
+        private void OnEditorPreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                e.Handled = true;
+                EditingCommands.EnterLineBreak.Execute(null, TargetRichTextBox);
+            }
+        }
+
         private void HighlightMatches()
+
         {
             if (TargetRichTextBox == null || _viewModel == null) return;
 
