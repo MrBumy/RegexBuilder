@@ -1,0 +1,89 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Title">RegexBuilder — Визуальный конструктор регулярных выражений</sys:String>
+    
+    <!-- Left panel tabs -->
+    <sys:String x:Key="TabConstructor">Конструктор</sys:String>
+    <sys:String x:Key="TabTesting">Тестирование</sys:String>
+    <sys:String x:Key="TabFavorites">Избранное</sys:String>
+    
+    <!-- Constructor tab -->
+    <sys:String x:Key="ConstructorHelp">Нажмите на кирпичик для вставки в позицию курсора:</sys:String>
+    <sys:String x:Key="CategoryChars">Символы и классы</sys:String>
+    <sys:String x:Key="CategoryBoundaries">Границы строки</sys:String>
+    <sys:String x:Key="CategoryQuantifiers">Квантификаторы (Повторения)</sys:String>
+    <sys:String x:Key="CategoryGroups">Группировка и ИЛИ</sys:String>
+    <sys:String x:Key="CategoryClasses">Символьные классы</sys:String>
+    
+    <!-- Testing tab -->
+    <sys:String x:Key="TestingTitle">Тестирование замены (Substitution)</sys:String>
+    <sys:String x:Key="ReplaceWithLabel">Заменить совпадения на:</sys:String>
+    <sys:String x:Key="ReplacementResultLabel">Результат автозамены:</sys:String>
+    
+    <!-- Favorites tab -->
+    <sys:String x:Key="DeleteFavoriteTooltip">Удалить из избранного</sys:String>
+    <sys:String x:Key="FavoritesEmpty">Список избранного пуст</sys:String>
+    
+    <!-- Library panel -->
+    <sys:String x:Key="LibraryHeader">Библиотека шаблонов</sys:String>
+    <sys:String x:Key="LibraryHint">Дважды кликните по шаблону для загрузки в редактор</sys:String>
+
+    <!-- Center panel -->
+    <sys:String x:Key="DefaultTargetText">Вставьте сюда текст для проверки регулярного выражения...</sys:String>
+    <sys:String x:Key="StatMatches">Найдено совпадений: </sys:String>
+    <sys:String x:Key="StatTime">Время выполнения: </sys:String>
+    <sys:String x:Key="StatGroups">Количество групп: </sys:String>
+    <sys:String x:Key="ShortcutsHint">F1 — Справка | Ctrl+Enter — Применить | Ctrl+S — Сохранить</sys:String>
+
+    <!-- Right panel -->
+    <sys:String x:Key="EditorHeader">Редактор регулярного выражения</sys:String>
+    <sys:String x:Key="FlagsHeader">Флаги выражения</sys:String>
+    <sys:String x:Key="BtnMagic">Сделать Regex по выделенному</sys:String>
+    <sys:String x:Key="InfoBlockHeader">Информация о шаблоне</sys:String>
+    <sys:String x:Key="BtnCopy">Копировать Regex (Ctrl+C)</sys:String>
+    <sys:String x:Key="BtnSave">Сохранить в избранное (Ctrl+S)</sys:String>
+    
+    <!-- Dialogs -->
+    <sys:String x:Key="SaveDialogTitle">Сохранить в избранное</sys:String>
+    <sys:String x:Key="SaveDialogName">Название шаблона:</sys:String>
+    <sys:String x:Key="SaveDialogDesc">Описание:</sys:String>
+    <sys:String x:Key="BtnSaveConfirm">Сохранить</sys:String>
+    <sys:String x:Key="BtnCancel">Отмена</sys:String>
+    <sys:String x:Key="BtnClose">Закрыть</sys:String>
+    
+    <!-- Syntax help cheatsheet -->
+    <sys:String x:Key="HelpTitle">Справка по синтаксису регулярных выражений</sys:String>
+    
+    <sys:String x:Key="HelpSecChars">Символьные классы</sys:String>
+    <sys:String x:Key="HelpSecCharsBody">• \d — цифра [0-9]&#x0a;• \D — не цифра&#x0a;• \w — буква, цифра или '_' [a-zA-Z0-9_]&#x0a;• \W — любая не буква/цифра&#x0a;• \s — любой пробельный символ (пробел, таб, перевод строки)&#x0a;• \S — любой непробельный символ&#x0a;• . — любой символ (кроме новой строки)</sys:String>
+    
+    <sys:String x:Key="HelpSecQuant">Квантификаторы повторений</sys:String>
+    <sys:String x:Key="HelpSecQuantBody">• * — 0 или более раз&#x0a;• + — 1 или более раз&#x0a;• ? — 0 или 1 раз (или ленивый поиск)&#x0a;• {n} — ровно n раз&#x0a;• {n,m} — от n до m раз&#x0a;• *?, +? — ленивые квантификаторы (находят минимальное совпадение)</sys:String>
+    
+    <sys:String x:Key="HelpSecBounds">Границы и привязки</sys:String>
+    <sys:String x:Key="HelpSecBoundsBody">• ^ — начало строки или текста&#x0a;• $ — конец строки или текста&#x0a;• \b — граница слова (между буквенным и небуквенным символом)&#x0a;• \B — не граница слова</sys:String>
+    
+    <sys:String x:Key="HelpSecGroups">Группировка и альтернатива</sys:String>
+    <sys:String x:Key="HelpSecGroupsBody">• (...) — группа захвата (сохраняет совпадение во внутренний буфер)&#x0a;• (?:...) — группа без захвата (не сохраняет совпадение)&#x0a;• (?&lt;name&gt;...) — именованная группа захвата&#x0a;• | — логическое ИЛИ&#x0a;• [a-z] — любой символ из диапазона a-z&#x0a;• [^a-z] — любой символ НЕ из диапазона a-z</sys:String>
+    
+    
+    <!-- Pattern Analyzer Info Strings -->
+    <sys:String x:Key="PatternInfoDefault">Введите регулярное выражение для анализа.</sys:String>
+    <sys:String x:Key="PatternInfoHeader">Анализ паттерна:</sys:String>
+    <sys:String x:Key="PatternInfoDigits">• \d — числовые цифры (0-9)</sys:String>
+    <sys:String x:Key="PatternInfoNonDigits">• \D — любые символы, кроме цифр</sys:String>
+    <sys:String x:Key="PatternInfoWord">• \w — буквенно-цифровые символы и символ подчеркивания</sys:String>
+    <sys:String x:Key="PatternInfoNonWord">• \W — любые символы, кроме буквенно-цифровых</sys:String>
+    <sys:String x:Key="PatternInfoSpaces">• \s — пробельные символы (пробел, табуляция, новая строка)</sys:String>
+    <sys:String x:Key="PatternInfoNonSpaces">• \S — любые символы, кроме пробельных</sys:String>
+    <sys:String x:Key="PatternInfoStart">• ^ — начало строки/текста</sys:String>
+    <sys:String x:Key="PatternInfoEnd">• $ — конец строки/текста</sys:String>
+    <sys:String x:Key="PatternInfoZeroOrMore">• * — квантификатор: 0 или более повторений</sys:String>
+    <sys:String x:Key="PatternInfoOneOrMore">• + — квантификатор: 1 или более повторений</sys:String>
+    <sys:String x:Key="PatternInfoOptional">• ? — квантификатор: 0 или 1 повторение, либо ленивый режим</sys:String>
+    <sys:String x:Key="PatternInfoGroup">• () — группа захвата или группировка</sys:String>
+    <sys:String x:Key="PatternInfoCustom">• Пользовательское выражение. Специфических токенов не обнаружено.</sys:String>
+    
+</ResourceDictionary>

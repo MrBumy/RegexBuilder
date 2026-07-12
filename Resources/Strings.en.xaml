@@ -1,0 +1,89 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Title">RegexBuilder — Visual Regex Constructor &amp; Analyzer</sys:String>
+    
+    <!-- Left panel tabs -->
+    <sys:String x:Key="TabConstructor">Constructor</sys:String>
+    <sys:String x:Key="TabTesting">Testing</sys:String>
+    <sys:String x:Key="TabFavorites">Favorites</sys:String>
+    
+    <!-- Constructor tab -->
+    <sys:String x:Key="ConstructorHelp">Click on a brick to insert it at current cursor position:</sys:String>
+    <sys:String x:Key="CategoryChars">Symbols and Classes</sys:String>
+    <sys:String x:Key="CategoryBoundaries">String Boundaries</sys:String>
+    <sys:String x:Key="CategoryQuantifiers">Quantifiers (Repetitions)</sys:String>
+    <sys:String x:Key="CategoryGroups">Grouping and OR</sys:String>
+    <sys:String x:Key="CategoryClasses">Character Classes</sys:String>
+    
+    <!-- Testing tab -->
+    <sys:String x:Key="TestingTitle">Substitution Testing</sys:String>
+    <sys:String x:Key="ReplaceWithLabel">Replace matches with:</sys:String>
+    <sys:String x:Key="ReplacementResultLabel">Replacement result:</sys:String>
+    
+    <!-- Favorites tab -->
+    <sys:String x:Key="DeleteFavoriteTooltip">Remove from favorites</sys:String>
+    <sys:String x:Key="FavoritesEmpty">Favorites list is empty</sys:String>
+    
+    <!-- Library panel -->
+    <sys:String x:Key="LibraryHeader">Template Library</sys:String>
+    <sys:String x:Key="LibraryHint">Double click template to load into editor</sys:String>
+
+    <!-- Center panel -->
+    <sys:String x:Key="DefaultTargetText">Paste target text here to test the regular expression...</sys:String>
+    <sys:String x:Key="StatMatches">Matches found: </sys:String>
+    <sys:String x:Key="StatTime">Execution time: </sys:String>
+    <sys:String x:Key="StatGroups">Groups count: </sys:String>
+    <sys:String x:Key="ShortcutsHint">F1 — Help | Ctrl+Enter — Apply | Ctrl+S — Save</sys:String>
+
+    <!-- Right panel -->
+    <sys:String x:Key="EditorHeader">Regular Expression Editor</sys:String>
+    <sys:String x:Key="FlagsHeader">Expression Flags</sys:String>
+    <sys:String x:Key="BtnMagic">Generate Regex from Selection</sys:String>
+    <sys:String x:Key="InfoBlockHeader">Pattern Info</sys:String>
+    <sys:String x:Key="BtnCopy">Copy Regex (Ctrl+C)</sys:String>
+    <sys:String x:Key="BtnSave">Save to Favorites (Ctrl+S)</sys:String>
+    
+    <!-- Dialogs -->
+    <sys:String x:Key="SaveDialogTitle">Save to Favorites</sys:String>
+    <sys:String x:Key="SaveDialogName">Template name:</sys:String>
+    <sys:String x:Key="SaveDialogDesc">Description:</sys:String>
+    <sys:String x:Key="BtnSaveConfirm">Save</sys:String>
+    <sys:String x:Key="BtnCancel">Cancel</sys:String>
+    <sys:String x:Key="BtnClose">Close</sys:String>
+    
+    <!-- Syntax help cheatsheet -->
+    <sys:String x:Key="HelpTitle">Regular Expression Syntax Reference</sys:String>
+    
+    <sys:String x:Key="HelpSecChars">Character Classes</sys:String>
+    <sys:String x:Key="HelpSecCharsBody">• \d — digit [0-9]&#x0a;• \D — non-digit&#x0a;• \w — word character (letter, digit, '_') [a-zA-Z0-9_]&#x0a;• \W — non-word character&#x0a;• \s — whitespace character (space, tab, newline)&#x0a;• \S — non-whitespace character&#x0a;• . — any single character (except newline)</sys:String>
+    
+    <sys:String x:Key="HelpSecQuant">Quantifiers (Repetitions)</sys:String>
+    <sys:String x:Key="HelpSecQuantBody">• * — 0 or more times&#x0a;• + — 1 or more times&#x0a;• ? — 0 or 1 time (or lazy qualifier)&#x0a;• {n} — exactly n times&#x0a;• {n,m} — between n and m times&#x0a;• *?, +? — lazy quantifiers (find shortest match first)</sys:String>
+    
+    <sys:String x:Key="HelpSecBounds">Boundaries and Anchors</sys:String>
+    <sys:String x:Key="HelpSecBoundsBody">• ^ — start of string or text&#x0a;• $ — end of string or text&#x0a;• \b — word boundary (between word and non-word char)&#x0a;• \B — non-word boundary</sys:String>
+    
+    <sys:String x:Key="HelpSecGroups">Grouping and Alternatives</sys:String>
+    <sys:String x:Key="HelpSecGroupsBody">• (...) — capturing group (captures into match groups)&#x0a;• (?:...) — non-capturing group&#x0a;• (?&lt;name&gt;...) — named capturing group&#x0a;• | — logical OR (alternative choice)&#x0a;• [a-z] — single char in character set range&#x0a;• [^a-z] — single char NOT in character set range</sys:String>
+    
+    
+    <!-- Pattern Analyzer Info Strings -->
+    <sys:String x:Key="PatternInfoDefault">Enter a regular expression to analyze.</sys:String>
+    <sys:String x:Key="PatternInfoHeader">Pattern analysis:</sys:String>
+    <sys:String x:Key="PatternInfoDigits">• \d — digits (0-9)</sys:String>
+    <sys:String x:Key="PatternInfoNonDigits">• \D — non-digits</sys:String>
+    <sys:String x:Key="PatternInfoWord">• \w — alphanumeric characters and underscore</sys:String>
+    <sys:String x:Key="PatternInfoNonWord">• \W — non-alphanumeric characters</sys:String>
+    <sys:String x:Key="PatternInfoSpaces">• \s — whitespace characters (space, tab, newline)</sys:String>
+    <sys:String x:Key="PatternInfoNonSpaces">• \S — non-whitespace characters</sys:String>
+    <sys:String x:Key="PatternInfoStart">• ^ — start of line/text</sys:String>
+    <sys:String x:Key="PatternInfoEnd">• $ — end of line/text</sys:String>
+    <sys:String x:Key="PatternInfoZeroOrMore">• * — quantifier: 0 or more repetitions</sys:String>
+    <sys:String x:Key="PatternInfoOneOrMore">• + — quantifier: 1 or more repetitions</sys:String>
+    <sys:String x:Key="PatternInfoOptional">• ? — quantifier: 0 or 1 repetition, or lazy match</sys:String>
+    <sys:String x:Key="PatternInfoGroup">• () — capturing group or clustering</sys:String>
+    <sys:String x:Key="PatternInfoCustom">• Custom pattern. No specific builder tokens detected.</sys:String>
+    
+</ResourceDictionary>
