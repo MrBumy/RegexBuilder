@@ -1,12 +1,5 @@
 # RegexBuilder
 
-[![Language Switcher](https://img.shields.type/badge/Language-English%20%7C%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-gold)](#table-of-contents)
-
-RegexBuilder — visual regular expression constructor, tester, and analyzer for .NET 8 WPF, styled with a premium dark mode (Gold/Blue accents).
-RegexBuilder — визуальный конструктор, тестер и анализатор регулярных выражений на .NET 8 WPF в стильном тёмном оформлении с золотыми и синими акцентами.
-
----
-
 ## Table of Contents / Содержание
 
 *   [English Version](#english-version)
